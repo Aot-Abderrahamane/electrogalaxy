@@ -71,10 +71,7 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->get();
 
 
 
-            <li class="dropdown menu-item"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-                        class="icon fa fa-paper-plane"></i>Cameras</a>
-                <!-- /.dropdown-menu -->
-            </li>
+            
             <!-- /.menu-item -->
 
 

@@ -7,8 +7,11 @@
       @endphp
 
       @foreach ($brands as $brand)
-      <div class="item m-t-15"> <a href="#" class="img-thumbnail"> <img style="width:100%; "
-            data-echo="{{ asset($brand->brand_image) }}" src="{{ asset($brand->brand_image) }}" alt=""> </a> </div>
+    <div class="item m-t-15"> <a href="#" class="img-thumbnail" style="border-radius: 10% 30% 50% 70%"> 
+      <img style="width:100% ;";
+            data-echo="{{ asset($brand->brand_image) }}" src="{{ asset($brand->brand_image) }}" alt="">
+           </a> 
+          </div>
       <!--/.item-->
       @endforeach
     </div>

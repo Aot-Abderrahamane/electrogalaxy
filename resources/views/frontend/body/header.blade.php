@@ -79,7 +79,7 @@
                                     </li>
                                 </ul>
                                 <input class="search-field" name="search" id="search" onfocus="search_result_show()"
-                                    onblur="search_result_hide()" placeholder="Search here..." />
+                                    onblur="search_result_hide()" placeholder="Cherche ici..." />
                                 <button class="search-button" type="submit"></button>
                             </div>
                     </div>
@@ -89,53 +89,51 @@
                 </div>
                 <!-- /.search-area -->
                 <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+
+
+                    <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
+                            data-toggle="dropdown">
+                            <div class="items-cart-inner">
+                                <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
+                                <div class="basket-item-count"><span class="count" id="cartQty"> </span></div>
+                                <div class="total-price-basket"> <span class="lbl">Carte </span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <!--   // Mini Cart Start with Ajax -->
+    
+                                <div id="miniCart">
+    
+                                </div>
+    
+                                <!--   // End Mini Cart Start with Ajax -->
+    
+    
+                                <div class="clearfix cart-total">
+                      <div class="pull-right"> <span class="text">Sub Total :</span>
+                        <span class='price'  id="cartSubTotal">  </span> </div>
+                      <div class="clearfix"></div>
+                      <a href="checkout.html" class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
+                       </div>
+                                <!-- /.cart-total-->
+    
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-menu-->
+                    </div>
+                    <!-- /.dropdown-cart -->
+                    <!-- /.dropdown-cart -->
+    
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+                </div>
             </div>
             <!-- /.top-search-holder -->
-
-            <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
                 <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 
-
-                <div class="dropdown dropdown-cart"> <a href="#" class="dropdown-toggle lnk-cart"
-                        data-toggle="dropdown">
-                        <div class="items-cart-inner">
-                            <div class="basket"> <i class="glyphicon glyphicon-shopping-cart"></i> </div>
-                            <div class="basket-item-count"><span class="count" id="cartQty"> </span></div>
-                            <div class="total-price-basket"> <span class="lbl">Carte </span>
-
-                            </div>
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <!--   // Mini Cart Start with Ajax -->
-
-                            <div id="miniCart">
-
-                            </div>
-
-                            <!--   // End Mini Cart Start with Ajax -->
-
-
-                            <div class="clearfix cart-total">
-                                <div class="pull-right"> <span class="text">totale:</span>
-                                    <span class='price' id="cartSubTotal"> </span>
-                                </div>
-                                <div class="clearfix"></div>
-                                <a href="{{ route('checkout') }}"
-                                    class="btn btn-upper btn-primary btn-block m-t-20">Checkout</a>
-                            </div>
-                            <!-- /.cart-total-->
-
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-menu-->
-                </div>
-                <!-- /.dropdown-cart -->
-                <!-- /.dropdown-cart -->
-
-                <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
-            </div>
+            
             <!-- /.top-cart-row -->
         </div>
         <!-- /.row -->
@@ -233,6 +231,7 @@
                                 <!-- // End Category Foreach -->
                                 <li class="dropdown  navbar-right special-menu"> <a href="#">Offre
                                         d'aujourd'hui</a> </li>
+                                        <li> <a href="{{ route('shop.page') }}">Shop</a> </li>
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="clearfix"></div>

@@ -194,8 +194,8 @@ ElectroGlaxay
                             <div class="container-fluid">
                                 <div class="caption bg-color vertical-center text-left">
 
-                                    <div class="big-text fadeInDown-1">{{ $slider->title }} </div>
-                                    <div class="excerpt fadeInDown-2 hidden-xs"> <span>{{ $slider->description }}</span>
+                                    <div class="big-text fadeInDown-1"> </div>
+                                    <div class="excerpt fadeInDown-2 hidden-xs"> <span></span>
                                     </div>
                                     
                                 </div>

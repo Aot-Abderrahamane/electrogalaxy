@@ -19,6 +19,7 @@ use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\User\CheckoutController;
 use App\Http\Controllers\User\StripeController;
 use App\Http\Controllers\User\ReviewController;
+use App\Http\Controllers\Frontend\ShopController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -352,9 +353,11 @@ Route::prefix('review')->group(function(){
 
     Route::get('/delete/{id}', [ReviewController::class, 'DeleteReview'])->name('delete.review');
 }); 
+});
 
 /// Product Search Route 
 Route::post('/search', [IndexController::class, 'ProductSearch'])->name('product.search');
 // Advance Search Routes 
 Route::post('search-product', [IndexController::class, 'SearchProduct']);
-});
+Route::get('/shop', [ShopController::class, 'ShopPage'])->name('shop.page');
+Route::post('/shop/filter', [ShopController::class, 'ShopFilter'])->name('shop.filter');

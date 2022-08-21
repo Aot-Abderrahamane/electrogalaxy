@@ -24,9 +24,11 @@ class IndexController extends Controller
 		$request->validate(["search" => "required"]);
         $item = $request->search;
         // echo "$item";
+		$sliders = Slider::where('status', 1)->orderBy('id', 'DESC')->limit(3)->get();
+
         $categories = Category::orderBy('category_name', 'ASC')->get();
-        $products = Product::where('product_name_en','LIKE',"%$item%")->select('product_name','product_thambnail','selling_price','id','product_slug')->limit(5)->get();
-        return view('frontend.product.search', compact('products', 'categories'));
+        $products = Product::where('product_name','LIKE',"%$item%")->select('product_name','product_thambnail','selling_price','id','product_slug')->limit(5)->get();
+        return view('frontend.product.search', compact('products', 'categories','sliders'));
     }
 	///// Advance Search Options 
 
@@ -35,9 +37,10 @@ class IndexController extends Controller
 		$request->validate(["search" => "required"]);
 
 		$item = $request->search;		 
-        
+		$sliders = Slider::where('status', 1)->orderBy('id', 'DESC')->limit(3)->get();
+
 		$products = Product::where('product_name','LIKE',"%$item%")->select('product_name','product_thambnail')->limit(5)->get();
-		return view('frontend.product.search_product',compact('products'));
+		return view('frontend.product.search_product',compact('products','sliders'));
 
 
 
